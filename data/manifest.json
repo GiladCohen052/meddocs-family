@@ -3,7 +3,11 @@
   "title": "בדיקות של סבתא",
   "pc_key": "BNyeVmz+RstRNQqSSK+KZCgIVyj8CxPRYkiIp70OUaMLFv6MSVW/E7QOrx6kBkm7egFI/pNfM3TEQ0iEBmc997s=",
   "key_id": "d0c5ffcaacf4774f",
-  "devices": {},
+  "devices": {
+    "de4aac88bd06183f": {
+      "wrapped": "R9bcKUvtaqHhEEF3uiSoEdikLrfsNMZJswpu9PCQ5wgD2PO6Mu0nWRwOywZGX9JYljDZGYMPVq3iP91H"
+    }
+  },
   "snapshot": "data/snapshot.bin",
   "verify": "data/verify.bin",
   "pages": {
