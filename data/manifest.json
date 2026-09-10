@@ -2,12 +2,8 @@
   "version": 2,
   "title": "בדיקות של סבתא",
   "pc_key": "BNyeVmz+RstRNQqSSK+KZCgIVyj8CxPRYkiIp70OUaMLFv6MSVW/E7QOrx6kBkm7egFI/pNfM3TEQ0iEBmc997s=",
-  "key_id": "894ef5a745d351dc",
-  "devices": {
-    "18096fd5acd5a64a": {
-      "wrapped": "Up1ixh/M+Myrqfya6G7ZDR8u8irJMjO948+BVOncz7Way+2TzbQ/Oa/UBDp/Zl1Kc3OY4OXKGZhzrhaU"
-    }
-  },
+  "key_id": "d0c5ffcaacf4774f",
+  "devices": {},
   "snapshot": "data/snapshot.bin",
   "verify": "data/verify.bin",
   "pages": {
