@@ -5,7 +5,8 @@
  * window.MedView = { SHELL_HTML, boot(bundle, loadPage, opts) }
  *   bundle   {documents, regions, labs, thumbs, lab_tests, open_followups, title, generated_at}
  *   loadPage (file) -> src string, or a promise of one - `file` is the snapshot's "pages/<doc>_<n>.jpg"
- *   opts     {container: element (default #app), lock: function (adds a "נעילה" button)}
+ *   opts     {container: element (default #app), lock: function (adds a "נעילה" button),
+ *             lockLabel: string (the button's text, default "נעילה")}
  * Everything rendered from data goes through textContent/createElement; SHELL_HTML is static markup.
  */
 (function () {
@@ -401,7 +402,7 @@ TABS.forEach(function (t) { id("btn-" + t).addEventListener("click", function ()
 var updated = id("updated");
 updated.textContent = (DATA.documents || []).length + " מסמכים · עודכן " + fmtStamp(DATA.generated_at);
 if (typeof opts.lock === "function") {
-  var lockBtn = el("button", "chip", "נעילה");
+  var lockBtn = el("button", "chip", opts.lockLabel || "נעילה");
   lockBtn.type = "button";
   lockBtn.id = "lockbtn";
   lockBtn.addEventListener("click", function () { opts.lock(); });

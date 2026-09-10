@@ -14,12 +14,22 @@
 <link rel="stylesheet" href="view.css">
 </head>
 <body>
-<section id="lock">
-  <p>הקלד את הסיסמה</p>
-  <input id="pass" type="password" autocomplete="current-password" autocapitalize="off" placeholder="סיסמת המשפחה">
-  <button type="button" id="unlock">פתיחה</button>
-  <div class="err" id="lock-err"></div>
-  <div class="busy" id="lock-busy" hidden>פותח…</div>
+<section id="gate">
+  <div id="gate-pending" hidden>
+    <p class="gate-title">בקשת גישה</p>
+    <p class="gate-text">שלחו את הקוד הזה לגילעד. אחרי שהוא יאשר את המכשיר, הדף ייפתח לבד.</p>
+    <p class="gate-note" id="gate-standalone" hidden>מומלץ קודם להוסיף למסך הבית (שיתוף ← "הוסף למסך הבית") ולפתוח משם, אחרת יהיה צורך לבקש גישה פעמיים.</p>
+    <code id="req-code" dir="ltr"></code>
+    <p><button type="button" id="req-share">שליחה</button> <button type="button" id="req-copy">העתקה</button></p>
+    <p class="gate-status" id="gate-status">ממתין לאישור…</p>
+  </div>
+  <div id="gate-revoked" hidden>
+    <p class="gate-title">הגישה בוטלה</p>
+    <p class="gate-text">המכשיר הזה כבר לא מורשה. לבקשת גישה מחדש:</p>
+    <p><button type="button" id="req-again">בקשה חדשה</button></p>
+  </div>
+  <div class="err" id="gate-err"></div>
+  <div class="busy" id="gate-busy">פותח…</div>
 </section>
 <div id="app" hidden></div>
 <script src="view.js"></script>
