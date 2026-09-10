@@ -79,7 +79,8 @@ table.labs td.num { direction:ltr; text-align:end; white-space:nowrap; }
 table.labs td.flag { white-space:nowrap; }
 td.H { color:var(--danger); font-weight:700; }
 td.L { color:var(--low); font-weight:700; }
-.pages { touch-action:pinch-zoom; }
+/* Vertical scrolling must keep working over the scans; pinch-zoom stays for reading small print. */
+.pages { touch-action:pan-y pinch-zoom; }
 img.page { display:block; width:100%; height:auto; margin-bottom:12px; border:1px solid var(--line);
   border-radius:10px; background:var(--card); }
 
