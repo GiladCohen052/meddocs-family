@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="בדיקות של סבתא">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#2b6cb0">
+<title>בדיקות של סבתא</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="stylesheet" href="view.css">
+</head>
+<body>
+<section id="lock">
+  <h1>בדיקות של סבתא</h1>
+  <p>הקלידו את סיסמת המשפחה. המסמכים מוצפנים ונפתחים רק במכשיר הזה.</p>
+  <input id="pass" type="password" autocomplete="current-password" autocapitalize="off" placeholder="סיסמת המשפחה">
+  <button type="button" id="unlock">פתיחה</button>
+  <div class="err" id="lock-err"></div>
+  <div class="busy" id="lock-busy" hidden>פותח…</div>
+</section>
+<div id="app" hidden></div>
+<script src="view.js"></script>
+<script src="cloud.js"></script>
+</body>
+</html>

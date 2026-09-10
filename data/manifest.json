@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "title": "בדיקות של סבתא",
+  "generated_at": "2026-09-10T22:13:30+00:00",
+  "kdf": {
+    "name": "PBKDF2",
+    "hash": "SHA-256",
+    "iterations": 300000,
+    "salt": "8MkKXeLoi9XJlTWllxkqEA=="
+  },
+  "snapshot": "data/snapshot.bin",
+  "verify": "data/verify.bin",
+  "pages": {
+    "pages/2_1.jpg": "data/pages/2_1.bin",
+    "pages/2_2.jpg": "data/pages/2_2.bin",
+    "pages/2_3.jpg": "data/pages/2_3.bin",
+    "pages/1_1.jpg": "data/pages/1_1.bin",
+    "pages/1_2.jpg": "data/pages/1_2.bin"
+  }
+}
