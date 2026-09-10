@@ -20,6 +20,7 @@
 "use strict";
 
 var MANIFEST_URL = "data/manifest.json";
+var UPDATED_URL = "data/updated.json";  // {generated_at}; kept apart from the manifest, see cloud.py
 var MANIFEST_VERSION = 2;
 var VERIFY_TEXT = "meddocs-family-v1";
 var WRAP_SALT = "meddocs-wrap-v1";
@@ -288,12 +289,20 @@ function disconnect() {
   recordDelete().then(revoke, revoke);
 }
 
+function fetchUpdatedAt() {
+  return fetch(UPDATED_URL, { cache: "no-store" })
+    .then(function (r) { return r.ok ? r.json() : {}; }, function () { return {}; })
+    .then(function (u) { return (u && u.generated_at) || ""; }, function () { return ""; });
+}
+
 function open() {
+  var updatedAt = fetchUpdatedAt();
   return fetchBytes(manifest.snapshot, true).then(function (blob) {
     return decryptText(key, manifest.snapshot, blob);
   }).then(function (text) {
     var bundle = JSON.parse(text);
-    bundle.generated_at = manifest.generated_at;
+    return updatedAt.then(function (at) { bundle.generated_at = at; return bundle; });
+  }).then(function (bundle) {
     bundle.title = bundle.title || manifest.title;
     stopPolling();
     id("gate").hidden = true;
