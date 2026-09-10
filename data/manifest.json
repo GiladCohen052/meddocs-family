@@ -1,7 +1,7 @@
 {
   "version": 1,
   "title": "בדיקות של סבתא",
-  "generated_at": "2026-09-10T22:21:32+00:00",
+  "generated_at": "2026-09-10T22:23:02+00:00",
   "kdf": {
     "name": "PBKDF2",
     "hash": "SHA-256",
