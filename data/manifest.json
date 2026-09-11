@@ -11,6 +11,8 @@
   "snapshot": "data/snapshot.bin",
   "verify": "data/verify.bin",
   "pages": {
+    "pages/3_1.jpg": "data/pages/3_1.bin",
+    "pages/3_2.jpg": "data/pages/3_2.bin",
     "pages/2_1.jpg": "data/pages/2_1.bin",
     "pages/2_2.jpg": "data/pages/2_2.bin",
     "pages/2_3.jpg": "data/pages/2_3.bin",
