@@ -6,6 +6,9 @@
   "devices": {
     "de4aac88bd06183f": {
       "wrapped": "R9bcKUvtaqHhEEF3uiSoEdikLrfsNMZJswpu9PCQ5wgD2PO6Mu0nWRwOywZGX9JYljDZGYMPVq3iP91H"
+    },
+    "fca361c493e5a5ca": {
+      "wrapped": "JrNCKdr09cNSoLSOZZWe7C4R2w9xSvibFVEzRwXehmssGNg3ZwvN21mS72rkIOlQEh+sH+0+0gvMCShz"
     }
   },
   "snapshot": "data/snapshot.bin",
